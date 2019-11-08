@@ -6,6 +6,7 @@ public class Boy : MonoBehaviour
     public float speed = 1.5f;
     [Header("跳躍高度"), Range(100, 1500)]
     public int jump = 100;
+    public Rigidbody rig;
     public Animator ator;
     public AudioSource audio;
     public AudioClip a;
@@ -24,9 +25,9 @@ public class Boy : MonoBehaviour
 
     public void Jump()
     {
-        if(isTouch == true) 
+        if (isTouch == true) 
         {
-            transform.position = new Vector3(0, 5, 0);
+            rig.AddForce(Vector3.up * jump);
             ator.SetBool("跳躍開關", true);
             audio.PlayOneShot(a);
         }

@@ -211,6 +211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   jump: 300
+  rig: {fileID: 565063394}
   ator: {fileID: 565063395}
   audio: {fileID: 565063396}
   a: {fileID: 8300000, guid: bc1b113a6cab24145b43ba67b11998bb, type: 3}
